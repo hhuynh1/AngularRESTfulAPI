@@ -40,12 +40,13 @@
 
     <div class="scroll">
         <h1> Employee Names</h1>
-        <p *ngFor="let names of employeeNames">
+        <p id = "demo" *ngFor="let names of employeeNames">
             {{names.firstName}}
             {{names.lastName}}
         </p>
     </div>
-    <button class="getBtn" type="button">GET</button>    
+    <button (click)="getNames()" method="get" class="getBtn">GET</button>    
+
 
 
     
