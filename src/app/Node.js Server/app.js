@@ -13,6 +13,25 @@ const users = [
   {lastName : ''}
 ];
 
+app.get('/', (req, res) => {
+	res.send("Node.js / Express.js is running on localhost:3000");
+  console.log(req.body)
+})
+
+
+// Returns array of names in JSON format
+app.get('/getNames', (req, res) => {
+	res.send(users);
+  console.log(req.body)
+})
+
+// Returns all names in JSON
+app.get('/getAllNames', (req, res) => {
+	res.send(users);
+  console.log(req.body)
+})
+
+// Stores list of names in a JSON format
 app.post('/postNames', (req, res) => {
   const names = req.body
   users.push(names)
