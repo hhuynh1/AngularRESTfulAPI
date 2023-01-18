@@ -28,11 +28,15 @@ button.getBtn1 {
     left: 10;
 
 }
+div.divGetBtn {
+    margin-top: 30px;
+    margin-left: 45%;
+    position:absolute;
+}
 div.divGetAllBtn {
     margin-top: 230px;
     margin-left: 73%;
     position:absolute;
-
 }
 div.div1 {
     float:left;
