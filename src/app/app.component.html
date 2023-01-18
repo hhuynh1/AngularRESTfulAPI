@@ -22,6 +22,7 @@
 </p>
 
     <form method="post" #names="ngForm" (ngSubmit)="onSubmit(names.value)">
+        
         <div class="container">
 
         <img src="assets\SJ-Tech.jpg">
@@ -32,15 +33,21 @@
 
         <input style="margin-top: 10px" type="text" name="lastName" ngModel placeholder="Enter Last Name"><br>
 
-        <button id="post" type="submit">POST</button>    
+        <button class="postBtn" id="post" type="submit">POST</button>    
         
         </div>    
     </form>
 
-    <p *ngFor="let names of employeeNames">
-        {{names.firstName}}
-        {{names.lastName}}
-    </p>
+    <div class="scroll">
+        <p *ngFor="let names of employeeNames">
+            {{names.firstName}}
+            {{names.lastName}}
+        </p>
+    </div>
+    <button class="getBtn" type="button">GET</button>    
+
+
+    
        
     
 

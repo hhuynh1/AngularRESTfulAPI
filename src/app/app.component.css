@@ -1,4 +1,4 @@
-button {
+button.postBtn {
     background-color: #04AA6D;
     border-radius: 10px;
     color: black;
@@ -7,14 +7,35 @@ button {
     border: none;
     cursor: pointer;
 }
-div {
-    text-align: center;
+button.getBtn {
+    padding: 20px;
+    margin-left: 55%;
+    background-color: #04AA6D;
+    border-radius: 10px;
+    color: black;
+    border: none;
+    margin-top: 20px;
+
 }
+div.container {
+    text-align: center;
+    float: left;
+    padding-left: 40px;
+}
+div.scroll {
+    background-color: white;
+    width: 600px;
+    height: 150px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    padding: 40px;
+    margin-left: 50%;
+    border-style: solid;
+  }
 img {
-    display: block;
     width: 100px;
     height: 100px;
-    margin-left: 585px;
   }
 h2 {
     text-align: center;
