@@ -9,14 +9,13 @@ export class AppServiceService  {
 
   constructor(private http: HttpClient) { }
 
-  url = 'http://localhost:3000/postNames'
 
   getNamesFromAPI() {
     return this.http.get('http://localhost:3000/getNames')
   }
 
   saveNamesToAPI(employeeNames : any) {
-    return this.http.post(this.url, employeeNames)
+    return this.http.post('http://localhost:3000/postNames', employeeNames)
   }
 
 }

@@ -8,16 +8,22 @@ import { AppServiceService } from './app-service.service';
 })
 export class AppComponent {
 
-employeeNames : any;
+userNames : any;
   
 constructor(private appService : AppServiceService) {
   this.appService.getNamesFromAPI().subscribe((data) => {
-    this.employeeNames = data;
+    this.userNames = data;
   }); 
  }
 
-onSubmit(employeeNames:any) {
-  this.appService.saveNamesToAPI(employeeNames).subscribe((result) => {
+ onRetrieve(names:any) {
+  this.appService.getNamesFromAPI().subscribe((result) => {
+  console.warn(result)
+  });     
+  }
+
+onSubmit(names:any) {
+  this.appService.saveNamesToAPI(names).subscribe((result) => { 
   console.warn(result)
   });     
   }

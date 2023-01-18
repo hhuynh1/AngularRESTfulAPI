@@ -1,16 +1,16 @@
-<p class="sjTitle">SJ Technologies, Inc</p>
-
-<p>
+<!DOCTYPE html>
+<html>
+<p class="p1">
     1. Develop a UI using Angular to capture First Name & Last Name separately
     <input type="checkbox" checked="checked">
     <br>
 
     2. Create a microservice to accept the above two attributes and create a JSON on the backend (nodejs).
-    <input type="checkbox">
+    <input type="checkbox" checked="checked">
     <br>
     
     3. Keep appending the JSON as more names are added from the front end.
-    <input type="checkbox">
+    <input type="checkbox" checked="checked">
     <br>
     
     4. Create another microservice to read the JSON file and send the result set to frontend.
@@ -22,19 +22,34 @@
     <br>
 </p>
 
-<img src="assets\SJ-Tech.jpg">
+    <form method="post" #names="ngForm" (ngSubmit)="onSubmit(names.value)">
+        <div>
 
-<form method="post" #names="ngForm" (ngSubmit)="onSubmit(names.value)">
+        <img src="assets\SJ-Tech.jpg">
 
-    <input type="text" value="firstName" name="firstName" ngModel placeholder="Enter First Name"><br>
-    <input type="text" value="lastName"  name="lastName" ngModel placeholder="Enter Last Name"><br>
+        <h1 style="margin-top: 10px" class="employeeName">Employee Names</h1>
 
-    <button type="submit">Submit</button>      
-</form>
+        <input type="text" name="firstName" ngModel placeholder="Enter First Name" ><br>
 
-<div>
-    {{employeeNames | json}}
-</div>
+        <input style="margin-top: 10px" type="text" name="lastName" ngModel placeholder="Enter Last Name"><br>
+
+        <button type="submit">Submit</button>     
+
+        <div>
+            {names : JSON}
+        </div>
+        
+
+        </div>    
+    </form>
+
+</html>
+
+
+
+
+
+
 
 
 
