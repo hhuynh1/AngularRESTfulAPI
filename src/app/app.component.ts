@@ -16,12 +16,6 @@ constructor(private appService : AppServiceService) {
   }); 
  }
 
- onRetrieve(names:any) {
-  this.appService.getNamesFromAPI().subscribe((result) => {
-  console.warn(result)
-  });     
-  }
-
 onSubmit(names:any) {
   this.appService.saveNamesToAPI(names).subscribe((result) => { 
   console.warn(result)
