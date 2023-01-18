@@ -32,6 +32,5 @@ onSubmit(names:any) {
   console.warn(names)
   });     
   console.log("Button Clicked")
-
   }
 }

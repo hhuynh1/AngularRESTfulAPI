@@ -9,28 +9,27 @@ button.postBtn {
 }
 button.getBtn {
     padding: 20px;
-    margin-left: 48%;
+    margin-left: 25%;
     background-color: #04AA6D;
     border-radius: 10px;
     color: black;
     border: none;
     margin-top: 10px;
-
 }
 div.container {
     text-align: center;
     float: left;
-    padding-left: 30px;
+    padding-left: 150px;
 }
 div.scroll {
     background-color: white;
-    width: 600px;
-    height: 130px;
+    width: 300px;
+    height: 183px;
     overflow-x: hidden;
     overflow-y: auto;
     text-align: center;
-    padding: 40px;
     margin-left: 40%;
+    margin-top: 40px;
     border-style: solid;
   }
 img {
@@ -47,4 +46,9 @@ h1 {
 }
 input {
     height: 20px;
+}
+
+.p1 {
+    color: #04AA6D;
+    padding-top: 10px;
 }
