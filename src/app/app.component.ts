@@ -6,19 +6,23 @@ import { AppServiceService } from './app-service.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-userNames : any;
+employeeNames : any;
   
 constructor(private appService : AppServiceService) {
-  this.appService.getNamesFromAPI().subscribe((data) => {
-    this.userNames = data;
-  }); 
+ }
+
+ ngOnInit() {
+  this.appService.get().subscribe((data) => {
+    this.employeeNames = data
+    console.warn(data)
+    }); 
  }
 
 onSubmit(names:any) {
-  this.appService.saveNamesToAPI(names).subscribe((result) => { 
-  console.warn(result)
+  this.appService.post(names).subscribe((names) => {
+  console.warn(names)
   });     
   }
 }

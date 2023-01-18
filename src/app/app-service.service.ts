@@ -10,11 +10,11 @@ export class AppServiceService  {
   constructor(private http: HttpClient) { }
 
 
-  getNamesFromAPI() {
+  get() {
     return this.http.get('http://localhost:3000/getNames')
   }
 
-  saveNamesToAPI(employeeNames : any) {
+  post(employeeNames : any) {
     return this.http.post('http://localhost:3000/postNames', employeeNames)
   }
 
