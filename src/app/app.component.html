@@ -27,7 +27,7 @@
         <h2>Registration</h2>
         <input type="text" name="firstName" ngModel placeholder="Enter First Name" ><br>
         <input style="margin-top: 10px" type="text" name="lastName" ngModel placeholder="Enter Last Name"><br>
-        <button (click)="getNames()" class="postBtn" id="post" type="submit">POST</button>    
+        <button class="postBtn" id="post" type="submit">POST</button>    
     </form>
 </div>    
 
@@ -37,6 +37,9 @@
         {{names.firstName}}
         {{names.lastName}}
     </p>
+</div>
+<div class="divGetBtn">
+    <button (click)="getNames()" class="getBtn">GET</button>
 </div>
 
 
