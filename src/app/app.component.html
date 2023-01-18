@@ -21,31 +21,38 @@
     <br>
 </p>
 
+<div class="div1">
     <form method="post" #names="ngForm" (ngSubmit)="onSubmit(names.value)">
-        
-        <div class="container">
-
         <img src="assets\SJ-Tech.jpg">
-
-        <h2 class="employeeName">Employee Names</h2>
-
+        <h2>Registration</h2>
         <input type="text" name="firstName" ngModel placeholder="Enter First Name" ><br>
-
         <input style="margin-top: 10px" type="text" name="lastName" ngModel placeholder="Enter Last Name"><br>
-
-        <button class="postBtn" id="post" type="submit">POST</button>    
-        
-        </div>    
+        <button (click)="getNames()" class="postBtn" id="post" type="submit">POST</button>    
     </form>
+</div>    
 
-    <div class="scroll">
-        <h1> Employee Names</h1>
-        <p *ngFor="let names of employeeNames">
-            {{names.firstName}}
-            {{names.lastName}}
-        </p>
-    </div>
-    <button (click)="getNames()" method="get" class="getBtn">GET</button>    
+<div class="div2">
+    <h2>Names</h2>
+    <p *ngFor="let names of employeeNames">
+        {{names.firstName}}
+        {{names.lastName}}
+    </p>
+</div>
+
+
+<div class="div3">
+    <h2> List</h2>
+    <p *ngFor="let names of allNames">
+        {{names.firstName}}
+        {{names.lastName}}
+    </p>
+</div>
+<div class="divGetAllBtn">
+    <button (click)="getAllNames()" class="getBtn1">GET ALL</button>
+</div>
+
+
+
 
 
 

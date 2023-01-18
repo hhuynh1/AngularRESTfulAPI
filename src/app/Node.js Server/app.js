@@ -31,7 +31,7 @@ app.get('/getAllNames', (req, res) => {
   console.log(req.body)
 })
 
-// Stores list of names in a JSON format
+// Stores list of names in a Array
 app.post('/postNames', (req, res) => {
   const names = req.body
   users.push(names)

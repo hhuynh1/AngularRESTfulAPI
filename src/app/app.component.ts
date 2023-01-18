@@ -9,6 +9,7 @@ import { AppServiceService } from './app-service.service';
 export class AppComponent implements OnInit {
 
 employeeNames : any;
+allNames : any
   
 constructor(private appService : AppServiceService) {
  }
@@ -18,6 +19,10 @@ constructor(private appService : AppServiceService) {
     this.employeeNames = data
     console.warn(data)
     }); 
+    this.appService.getAll().subscribe((data) => {
+      this.allNames = data
+      console.warn(data)
+      }); 
  }
 
 getNames() {
@@ -27,10 +32,16 @@ getNames() {
     }); 
 }
 
+getAllNames() {
+  this.appService.getAll().subscribe((data) => {
+    this.allNames = data
+    console.warn(data)
+    }); 
+}
+
 onSubmit(names:any) {
   this.appService.post(names).subscribe((names) => {
   console.warn(names)
   });     
-  console.log("Button Clicked")
   }
 }
