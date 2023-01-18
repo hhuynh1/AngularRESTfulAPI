@@ -22,11 +22,11 @@
 </p>
 
     <form method="post" #names="ngForm" (ngSubmit)="onSubmit(names.value)">
-        <div>
+        <div class="container">
 
         <img src="assets\SJ-Tech.jpg">
 
-        <h2 style="margin-top: 10px" class="employeeName">Employee Names</h2>
+        <h2 class="employeeName">Employee Names</h2>
 
         <input type="text" name="firstName" ngModel placeholder="Enter First Name" ><br>
 
@@ -39,6 +39,7 @@
 
     <p *ngFor="let names of employeeNames">
         {{names.firstName}}
+        {{names.lastName}}
     </p>
        
     
