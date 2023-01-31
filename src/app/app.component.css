@@ -45,8 +45,6 @@ div.div1 {
     height:280px;
     margin-left: 100px;
     text-align: center;
-    border-style: solid;
-
 }
 div.div2{
     float:left;
@@ -86,6 +84,6 @@ input {
 }
 
 .p1 {
-    color: #04AA6D;
+    color: #0019b9;
     padding-top: 10px;
 }
