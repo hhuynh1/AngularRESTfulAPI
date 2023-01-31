@@ -1,59 +1,20 @@
-
-<p class="p1">
-    1. Develop a UI using Angular to capture First Name & Last Name separately
-    <input type="checkbox" checked="checked">
-    <br>
-
-    2. Create a microservice to accept the above two attributes and create a JSON on the backend (nodejs).
-    <input type="checkbox" checked="checked">
-    <br>
-    
-    3. Keep appending the JSON as more names are added from the front end.
-    <input type="checkbox" checked="checked">
-    <br>
-    
-    4. Create another microservice to read the JSON file and send the result set to frontend.
-    <input type="checkbox" checked="checked">
-    <br>
-    
-    5. Develop another UI to read the JSON and list all the names from the JSON using the microservice created in step 4.
-    <input type="checkbox" checked="checked">
-    <br>
-</p>
-
-<div class="div1">
-    <form method="post" #names="ngForm" (ngSubmit)="onSubmit(names.value)">
-        <img src="assets\SJ-Tech.jpg">
-        <h2>Registration</h2>
-        <input type="text" name="firstName" ngModel placeholder="Enter First Name" ><br>
-        <input style="margin-top: 10px" type="text" name="lastName" ngModel placeholder="Enter Last Name"><br>
-        <button class="postBtn" id="post" type="submit">POST</button>    
-    </form>
-</div>    
-
-<div class="div2">
-    <h2>Names</h2>
-    <p *ngFor="let names of employeeNames">
-        {{names.firstName}}
-        {{names.lastName}}
-    </p>
-</div>
-<div class="divGetBtn">
-    <button (click)="getNames()" class="getBtn">GET</button>
-</div>
-
-
-<div class="div3">
-    <h2> List</h2>
-    <p *ngFor="let names of allNames">
-        {{names.firstName}}
-        {{names.lastName}}
-    </p>
-</div>
-<div class="divGetAllBtn">
-    <button (click)="getAllNames()" class="getBtn1">GET ALL</button>
-</div>
-
+<!DOCTYPE html>
+<html>
+    <body>
+        <div class="container">
+            <form method="post" #names="ngForm" (ngSubmit)="onSubmit(names.value)">
+                <img src="assets\atl-urgent-care-logo.png">
+                <h1 class="checkinText">Registration</h1>
+                <input type="text" name="firstName" ngModel placeholder="First Name" ><br>
+                <input type="text" name="lastName" ngModel placeholder="Last Name"><br>
+                <input type="number" name="age" ngModel placeholder="Age"><br>
+                <input type="tel" name="telephone" ngModel placeholder="Phone"><br>
+                <input type="date" name="date"><br>
+                <button class="submitBtn" id="post" type="submit">Check In</button>    
+            </form>
+        </div>   
+    </body>
+</html>
 
 
 

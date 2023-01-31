@@ -35,7 +35,6 @@ app.get('/getAllNames', (req, res) => {
 app.post('/postNames', (req, res) => {
   const names = req.body
   users.push(names)
-  res.send(req.body)
   console.log(req.body)
 })
 
@@ -49,3 +48,4 @@ app.get('/getNames', (req, res) => {
 app.listen(port, (req, res) =>{
   console.log('Node.js server listening on localhost:3000!');
 })
+  res.send(req.body)
