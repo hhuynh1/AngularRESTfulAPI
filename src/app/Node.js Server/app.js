@@ -35,7 +35,6 @@ app.get('/getAllNames', (req, res) => {
 app.post('/postNames', (req, res) => {
   const names = req.body
   users.push(names)
-  res.send(req.body)
   console.log(req.body)
 })
 

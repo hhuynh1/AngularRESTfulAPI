@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 
 
 
@@ -19,7 +21,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    MatTabsModule
+    MatTabsModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
