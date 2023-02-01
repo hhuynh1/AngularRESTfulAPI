@@ -48,4 +48,3 @@ app.get('/getNames', (req, res) => {
 app.listen(port, (req, res) =>{
   console.log('Node.js server listening on localhost:3000!');
 })
-  res.send(req.body)
